@@ -15,11 +15,17 @@ class PostViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .purple
         self.navigationItem.title = post.title
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Info", style: .plain, target: self, action: #selector(newPage))
     }
 
     func setPost(post: Post) {
         self.post = post
     }
+    @objc func newPage() {
+        let viewController = InfoViewController()
+        present(viewController, animated: true)
+    }
+
 
 
 

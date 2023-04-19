@@ -41,7 +41,6 @@ class ProfileHeaderView: UIView {
 
         let button = UIButton()
         button.backgroundColor = .systemBlue
-        button.setTitleColor(.white, for: .normal)
         button.setTitle("Show status", for: .normal)
 
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
@@ -52,7 +51,7 @@ class ProfileHeaderView: UIView {
         button.layer.shadowOffset.width = 4
         button.layer.shadowRadius = 4
         button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.opacity = 0.7
+        button.layer.shadowOpacity = 0.7
         button.layer.masksToBounds = false
         return button
     }()

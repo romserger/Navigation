@@ -13,10 +13,11 @@
 		58A4099B29E72B7700042744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58A4099A29E72B7700042744 /* Assets.xcassets */; };
 		58A4099E29E72B7700042744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58A4099C29E72B7700042744 /* LaunchScreen.storyboard */; };
 		58A409A629E733AC00042744 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A409A529E733AC00042744 /* FeedViewController.swift */; };
-		58A409A829E7341700042744 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A409A729E7341700042744 /* ProfileViewController.swift */; };
 		58A409AA29E7390300042744 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A409A929E7390300042744 /* PostViewController.swift */; };
 		58A409AC29E73F0F00042744 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A409AB29E73F0F00042744 /* Post.swift */; };
 		58DFABA829EA995D00AD5BE9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DFABA729EA995D00AD5BE9 /* InfoViewController.swift */; };
+		58DFABAB29EAA35A00AD5BE9 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DFABAA29EAA35A00AD5BE9 /* ProfileHeaderView.swift */; };
+		58DFABAD29EAA39200AD5BE9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DFABAC29EAA39200AD5BE9 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +29,11 @@
 		58A4099D29E72B7700042744 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58A4099F29E72B7700042744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58A409A529E733AC00042744 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		58A409A729E7341700042744 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		58A409A929E7390300042744 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		58A409AB29E73F0F00042744 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		58DFABA729EA995D00AD5BE9 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		58DFABAA29EAA35A00AD5BE9 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		58DFABAC29EAA39200AD5BE9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		58A4099029E72B7600042744 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				58DFABA929EAA32800AD5BE9 /* Profile */,
 				58A4099129E72B7600042744 /* AppDelegate.swift */,
 				58A4099329E72B7600042744 /* SceneDelegate.swift */,
 				58A4099529E72B7600042744 /* ViewController.swift */,
@@ -71,12 +74,20 @@
 				58A4099C29E72B7700042744 /* LaunchScreen.storyboard */,
 				58A4099F29E72B7700042744 /* Info.plist */,
 				58A409A529E733AC00042744 /* FeedViewController.swift */,
-				58A409A729E7341700042744 /* ProfileViewController.swift */,
 				58A409A929E7390300042744 /* PostViewController.swift */,
 				58A409AB29E73F0F00042744 /* Post.swift */,
 				58DFABA729EA995D00AD5BE9 /* InfoViewController.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		58DFABA929EAA32800AD5BE9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				58DFABAA29EAA35A00AD5BE9 /* ProfileHeaderView.swift */,
+				58DFABAC29EAA39200AD5BE9 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +162,9 @@
 			files = (
 				58A409AA29E7390300042744 /* PostViewController.swift in Sources */,
 				58A4099629E72B7600042744 /* ViewController.swift in Sources */,
+				58DFABAD29EAA39200AD5BE9 /* ProfileViewController.swift in Sources */,
 				58A4099229E72B7600042744 /* AppDelegate.swift in Sources */,
-				58A409A829E7341700042744 /* ProfileViewController.swift in Sources */,
+				58DFABAB29EAA35A00AD5BE9 /* ProfileHeaderView.swift in Sources */,
 				58A409A629E733AC00042744 /* FeedViewController.swift in Sources */,
 				58A409AC29E73F0F00042744 /* Post.swift in Sources */,
 				58DFABA829EA995D00AD5BE9 /* InfoViewController.swift in Sources */,

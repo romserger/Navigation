@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let tabBar = UITabBarController()
         let navigationFeed = UINavigationController(rootViewController: FeedViewController())
-        let navigationProfile = UINavigationController(rootViewController:ProfileViewController())
+        let navigationProfile = UINavigationController(rootViewController:LogInViewController())
         navigationFeed.tabBarItem.title = "Feed"
         navigationFeed.tabBarItem.image = UIImage(systemName: "note.text")
         navigationProfile.tabBarItem.title = "Profile"

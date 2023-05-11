@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58110D4C2A065A3A00CC5D7D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58110D4B2A065A3A00CC5D7D /* LogInViewController.swift */; };
+		58110D4E2A07BD1200CC5D7D /* MyTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58110D4D2A07BD1200CC5D7D /* MyTextFieldView.swift */; };
 		58A4099229E72B7600042744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4099129E72B7600042744 /* AppDelegate.swift */; };
 		58A4099429E72B7600042744 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4099329E72B7600042744 /* SceneDelegate.swift */; };
 		58A4099629E72B7600042744 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A4099529E72B7600042744 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58110D4B2A065A3A00CC5D7D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		58110D4D2A07BD1200CC5D7D /* MyTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextFieldView.swift; sourceTree = "<group>"; };
 		58A4098E29E72B7600042744 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A4099129E72B7600042744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58A4099329E72B7600042744 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 			children = (
 				58DFABAA29EAA35A00AD5BE9 /* ProfileHeaderView.swift */,
 				58DFABAC29EAA39200AD5BE9 /* ProfileViewController.swift */,
+				58110D4B2A065A3A00CC5D7D /* LogInViewController.swift */,
+				58110D4D2A07BD1200CC5D7D /* MyTextFieldView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -168,6 +174,8 @@
 				58A409A629E733AC00042744 /* FeedViewController.swift in Sources */,
 				58A409AC29E73F0F00042744 /* Post.swift in Sources */,
 				58DFABA829EA995D00AD5BE9 /* InfoViewController.swift in Sources */,
+				58110D4C2A065A3A00CC5D7D /* LogInViewController.swift in Sources */,
+				58110D4E2A07BD1200CC5D7D /* MyTextFieldView.swift in Sources */,
 				58A4099429E72B7600042744 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

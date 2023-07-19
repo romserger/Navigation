@@ -37,6 +37,19 @@ class ProfileHeaderView: UIView {
         return label
     }()
 
+    let statusTextField: MyTextFieldView = {
+        let text = MyTextFieldView()
+        text.font = .systemFont(ofSize: 15, weight: UIFont.Weight.regular)
+        text.textColor = .black
+        text.layer.borderWidth = 1
+        text.layer.borderColor = UIColor.black.cgColor
+        text.layer.cornerRadius = 12
+        text.backgroundColor = .white
+        text.translatesAutoresizingMaskIntoConstraints = false
+        text.placeholder = "Set your status..."
+        return text
+    }()
+
     lazy var setStatusButton: UIButton = {
 
         let button = UIButton()
@@ -56,17 +69,7 @@ class ProfileHeaderView: UIView {
         return button
     }()
 
-    let statusTextField: UITextField = {
-        let text = UITextField()
-        text.font = .systemFont(ofSize: 15, weight: UIFont.Weight.regular)
-        text.textColor = .black
-        text.layer.borderWidth = 1
-        text.layer.borderColor = UIColor.black.cgColor
-        text.layer.cornerRadius = 12
-        text.backgroundColor = .white
-        text.translatesAutoresizingMaskIntoConstraints = false
-        return text
-    }()
+
 
 
     init() {

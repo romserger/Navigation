@@ -9,25 +9,25 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    let photosViewController = PhotosViewController()
+
     let profileHederView = ProfileHeaderView()
 
     let table = UITableView(frame: .zero, style: .grouped)
 
-    let array: [PostViewModel] = [
-        PostViewModel(title: "GUGKJK", imagePost: "Smile cat", likes: 2324, views: 232323, discription: "LJGKJKHH"),
-        PostViewModel(title: "VJHGHKLJ", imagePost: "Smile cat1", likes: 686, views: 988, discription: "KGIKHKLJ"),
-        PostViewModel(title: "JKHLHJ:J", imagePost: "Smile cat2", likes: 87686, views: 989987, discription: "KGKKHG"),
-        PostViewModel(title: "HHJLHJL", imagePost: "Smile cat3", likes: 87, views: 87879, discription: "KGJKHLKLL")
-    ]
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+    }
+
+    func setupView() {
         table.translatesAutoresizingMaskIntoConstraints = false
         table.backgroundColor = .lightGray
         view.addSubview(table)
         table.dataSource = self
         table.delegate = self
         table.register(PostTableViewCell.self, forCellReuseIdentifier: "postTableViewCell")
+        table.register(PhotosTableViewCell.self, forCellReuseIdentifier: "photosTableViewCell")
         NSLayoutConstraint.activate([
             table.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             table.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -43,13 +43,26 @@ extension ProfileViewController: UITableViewDelegate {
 
 extension ProfileViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        array.count
+        if section == 0 {
+            return 1
+        } else {
+            return Data.postArray.count
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell", for: indexPath) as! PostTableViewCell
-        cell.setData(postData: array[indexPath.row])
-        return cell
+
+        if indexPath.section == 0 {
+            let photos = tableView.dequeueReusableCell(withIdentifier: "photosTableViewCell", for: indexPath) as! PhotosTableViewCell
+            photos.selectionStyle = .none
+            photos.delegate = self
+            return photos
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell", for: indexPath) as! PostTableViewCell
+            cell.setData(postData: Data.postArray[indexPath.row])
+            return cell
+        }
+
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -57,7 +70,12 @@ extension ProfileViewController: UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        250
+
+        if section == 0 {
+            return 250
+        } else {
+            return 0
+        }
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -68,5 +86,22 @@ extension ProfileViewController: UITableViewDataSource{
             return nil
         }
     }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        2
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            touchViewAction()
+        }
+    }
 }
 
+extension ProfileViewController: ProtoTableViewCellDelegate {
+    func touchViewAction() {
+        navigationController?.pushViewController(photosViewController, animated: true)
+    }
+
+
+}
